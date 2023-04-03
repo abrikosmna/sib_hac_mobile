@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/apartment_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apartment address" />
+
+    <EditText
+        android:id="@+id/developer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Developer's name" />
+
+    <Switch
+        android:id="@+id/gost_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apartment passed the GOST" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <ListView
+                android:id="@+id/list_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Comment"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/upload_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload photos"
+        android:visibility="gone"
+        android:onClick="onClickChooseImage"/>
+
+
+    <Button
+        android:id="@+id/sumbit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sumbit"
+        android:onClick="OnCliclSumbit"/>
+
+
+</LinearLayout>
